@@ -12,6 +12,14 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+
+      - name: Use secret in script
+        env:
+          REDDIT_SECRET: ${{ secrets.REDDIT_SECRET }}
+          REDDIT_URL: ${{secrets.REDDIT_URL}}
+          REDDIT_U_AGENT: ${{secrets.REDDIT_U_AGENT}}
+          SUPABASE_KEY: ${{secrets.SUPABASE_KEY}}
+          SUPABASE_URL: ${{secrets.SUPABASE_URL}}
         
       - name: Set up Python
         uses: actions/setup-python@v4
