@@ -1,0 +1,5 @@
+name: Chalice automation job
+on:
+  schedule:
+    - cron: '*/10 * * * *'
+    
