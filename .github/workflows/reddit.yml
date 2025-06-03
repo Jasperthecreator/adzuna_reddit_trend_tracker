@@ -1,4 +1,4 @@
-name: Autopyrunner
+name: Chalice Automation Job
 
 on:
   workflow_dispatch:
