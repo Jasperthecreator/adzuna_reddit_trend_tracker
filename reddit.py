@@ -15,4 +15,4 @@ from supabase import create_client, Client
 url = os.getenv('SUPABASE_URL')
 key = os.getenv('SUPABASE_KEY')
 client = create_client(url, key)
-client.table('r_ds').insert({'highest_users': r_count}).execute()
+client.table('r_ds').insert({'active_users': r_count}).execute()
