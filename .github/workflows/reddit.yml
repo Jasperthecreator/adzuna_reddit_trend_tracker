@@ -1,4 +1,4 @@
-name: Chalice Automation Job
+name: Chalice Reddit Job
 
 on:
   workflow_dispatch:
