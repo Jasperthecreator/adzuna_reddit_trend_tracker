@@ -12,3 +12,5 @@ key = ${{supabase_key}}
 trend_agg = {"7d": trend_7d, "30d": trend_30d}
 client = create_client(url, key)
 client.table("Pytrends - DS").insert(trend_agg).execute()
+
+
