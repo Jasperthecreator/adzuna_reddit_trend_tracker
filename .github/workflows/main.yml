@@ -1,0 +1,32 @@
+name: Chalice Compiler Job
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "29 18 * * *"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run compiler.py
+        run: python compiler.py
+        env:
+          REDDIT_SECRET: ${{ secrets.REDDIT_SECRET }}
+          REDDIT_URL: ${{ secrets.REDDIT_URL }}
+          REDDIT_U_AGENT: ${{ secrets.REDDIT_U_AGENT }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
