@@ -15,7 +15,11 @@ for count in reddit_response.data:
 reddit_highest = max(reddit_user_count)
 reddit_median = np.median(reddit_user_count)
 
-mapping = {"reddit_highest": reddit_highest, "reddit_median": reddit_median}
+adzuna_count = client.table('adzuna').select('title', count='exact', head=True)
+
+mapping = {"reddit_highest": reddit_highest, "reddit_median": reddit_median, "adzuna_count": adzuna_count}
 client.table('lake_fedou').insert(mapping).execute()  #inserting the data derived from branch tables 
                                                       #into main table
-client.table('r_ds').delete().neq("id",0).execute()
+
+client.table('r_ds').delete().neq("id",0).execute() 
+client.table('r_ds').delete().neq("id",0).execute() 
