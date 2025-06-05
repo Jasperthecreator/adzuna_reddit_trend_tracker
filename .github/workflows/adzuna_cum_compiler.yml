@@ -22,6 +22,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Run adzuna.py
+        run: python adzuna.py
+
       - name: Run compiler.py
         run: python compiler.py
         env:
@@ -30,3 +33,6 @@ jobs:
           REDDIT_U_AGENT: ${{ secrets.REDDIT_U_AGENT }}
           SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          ADZUNA_URL: ${{ secrets.ADZUNA_URL }}
+          ADZUNA_ID: ${{ secrets.ADZUNA_ID }}
+          ADZUNA_KEY: ${{ secrets.ADZUNA_KEY }}
