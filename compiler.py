@@ -21,5 +21,5 @@ mapping = {"reddit_highest": reddit_highest, "reddit_median": reddit_median, "ad
 client.table('lake_fedou').insert(mapping).execute()  #inserting the data derived from branch tables 
                                                       #into main table
 
-client.table('r_ds').delete().neq("id",0).execute() 
-client.table('r_ds').delete().neq("id",0).execute() 
+client.table('r_ds').delete()..filter("id", "neq", 0).execute() 
+client.table('r_ds').delete()..filter("id", "neq", 0).execute() 
