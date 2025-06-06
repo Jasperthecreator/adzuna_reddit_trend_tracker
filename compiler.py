@@ -22,4 +22,4 @@ client.table('lake_fedou').insert(mapping).execute()  #inserting the data derive
                                                       #into main table
 
 client.table('r_ds').delete().filter("id", "neq", 0).execute() 
-client.table('r_ds').delete().filter("id", "neq", 0).execute() 
+client.table('adzuna').delete().filter("id", "neq", 0).execute() 
