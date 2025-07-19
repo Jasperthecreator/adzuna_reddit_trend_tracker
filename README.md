@@ -10,4 +10,6 @@ The script which captures the reddit data is run every 10 mins and averaged out 
 
 While I did also write the scripts to get data from Google Trends, I unfortunately got rate-limited. You can give it a try though! thanks for visiting!
 
-
+Built using the Adzuna Job Search API and PRAW (Python Reddit API Wrapper) ❤️:
+Adzuna API: https://developer.adzuna.com/
+PRAW: https://praw.readthedocs.io/
