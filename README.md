@@ -1,4 +1,4 @@
-This is a project I ran (and is currently running) to check the "saturation rate" of the job market in the filed of data science. 
+This is a project I ran (and am currently running) to check the "saturation rate" of the job market in the filed of data science. 
 
 This was just an excercise for me in terms of getting familiar with APIs and database interactions through Python.
 
